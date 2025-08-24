@@ -2,7 +2,7 @@ name: Build & Deploy (Vite → GitHub Pages)
 
 on:
   push:
-    branches: ["main"]          # change to your default branch if needed
+    branches: ["master"]          # change to your default branch if needed
   workflow_dispatch:            # allow manual runs from Actions tab
 
 jobs:
@@ -43,8 +43,8 @@ jobs:
     name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
-    # only perform deploy job when triggered by a push to main (not pull_request)
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # only perform deploy job when triggered by a push to master (not pull_request)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     environment:
       name: github-pages
     steps:
