@@ -31,7 +31,7 @@ jobs:
       - name: Build (Vite)
         # We pass --base so Vite emits correct asset paths for project pages.
         # For user/org pages, base should be "/" — see notes below.
-        run: npm run build -- --base=/$REPO_NAME/
+        run: npm run build
         env:
           CI: true
 
