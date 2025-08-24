@@ -1,0 +1,85 @@
+{
+  "name": "Aditya Lohuni",
+  "email": "adityalohuni@gmail.com",
+  "github": "https://github.com/snowleopard17",
+  "linkedin": "https://www.linkedin.com/in/adityalohuni/",
+  "resumeLink": "/resume.pdf",
+  "avatar": "/assets/aditya_grey.png",
+  "bio": "I’m a software engineer passionate about applied AI and full-stack development. From building LLM-powered bots to scraping Hinglish datasets, I turn ideas into practical solutions. Currently studying in Poland to deepen my expertise in AI and robotics.",
+  "tech": [
+    "C++14/17",
+    "Python",
+    "JavaScript/TypeScript",
+    "Next.js",
+    "Flutter",
+    "PyTorch",
+    "Rust",
+    "Go",
+    "React Native",
+    "React",
+    ".NET"
+  ],
+
+  "certs": [
+    {
+      "title": "Introduction to Big Data and Hadoop",
+      "issuer": "Great Learning",
+      "year": 2025,
+      "link": "https://www.mygreatlearning.com/certificate/FAKNXUJX"
+    },
+    {
+      "title": "Redis for AI",
+      "issuer": "Redis University",
+      "year": 2025,
+      "link": "https://university.redis.io/certificate/rndqdubynly5dx"
+    },
+    {
+      "title": "Deploying and Evaluating GenAI Apps with MongoDB",
+      "issuer": "MongoDB",
+      "year": 2025,
+      "link": "https://www.credly.com/badges/01813ebf-42e2-4c75-9c52-0d64d65607de"
+    },
+    {
+      "title": "Introduction to Model Context Protocol",
+      "issuer": "Anthropic",
+      "year": 2025,
+      "link": "https://verify.skilljar.com/c/5gshw69kr52t"
+    }
+  ],
+  "interests": {
+    "strava": "https://www.strava.com/athletes/180702997",
+    "text": "When I’m not coding, I enjoy reading AI research papers, exploring robotics concept and going to a few trails."
+  },
+  "topSkills": ["Vision", "Data scraping and NLP", "Full-stack development"],
+  "openTo": "Full-stack / AI systems / Robotics",
+  "links": {
+    "blog": "/blog"
+  },
+  "labels": {
+    "aboutHeading": "About Me",
+    "techSummaryTitle": "Technical Summary",
+    "techSummarySubtitle": "Languages, frameworks & tools I use:",
+    "noQuickStats": "No quick stats configured",
+    "certsTitle": "Selected Certificates",
+    "certsSubtitle": "Proof of study — links to verification",
+    "noCerts": "No certificates listed",
+    "writingTitle": "Writing & Notes",
+    "writingSubtitle": "I share insights on AI and development on my blog.",
+    "papersStatus": "Coming soon",
+    "viewBlogBtn": "View blog",
+    "interestsTitle": "Interests",
+    "viewStravaBtn": "View Strava",
+    "noStrava": "No Strava link provided",
+    "roleTag": "Software Engineer — Full-stack · AI · Robotics",
+    "emailNotConfigured": "Email not configured",
+    "downloadResumeBtn": "Download Resume",
+    "openToPrefix": "Interested roles: ",
+    "availableFor": "Available for interviews",
+    "topSkillsTitle": "Top skills",
+    "noTopSkills": "No top skills configured",
+    "collabQuestion": "Looking to collaborate?",
+    "collabSubject": "Opportunity",
+    "sayHelloBtn": "Say hello",
+    "contactNotConfigured": "Contact not configured"
+  }
+}
