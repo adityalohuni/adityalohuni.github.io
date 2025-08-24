@@ -2,7 +2,8 @@ name: Build & Deploy (Vite → GitHub Pages)
 
 on:
   push:
-    branches: ["master"]          # change to your default branch if needed
+    branches:
+      - master          # change to your default branch if needed
   workflow_dispatch:            # allow manual runs from Actions tab
 
 jobs:
@@ -35,7 +36,7 @@ jobs:
           CI: true
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist          # update if your build output dir differs
 
@@ -49,4 +50,4 @@ jobs:
       name: github-pages
     steps:
       - name: Deploy artifact to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
