@@ -1,19 +1,27 @@
 import { useState, useMemo } from "react";
 import { yyyymmToDayAII } from "@/lib/stringToDate";
 
-/**
- * Timeline
- *
- * - Left column: scrollable list of timeline items (date + title)
- *   - Items are keyboard-focusable (button) and show an enlarged title on hover/focus
- * - Right column: detail card styled similar to the About page cards
- * - Responsive: stacks vertically on small screens
- */
+type TimelineItem = {
+  title: string;
+  subtitle?: string;
+  role?: string;
+  location?: string;
+  description?: string;
+  tags?: string[];
+  link?: string;
+  repo?: string;
+  quickFacts?: string[];
+  related?: string[];
+};
+
+type TimelineData = Record<string, TimelineItem>;
 
 export function Timeline() {
-  const data = import.meta.glob("/content/timeline/timeline.json", {
+  const modules = import.meta.glob("/content/timeline/timeline.json", {
     eager: true,
-  })["/content/timeline/timeline.json"].default;
+  }) as Record<string, { default: TimelineData }>;
+  const data = modules["/content/timeline/timeline.json"].default;
+
   const keys = useMemo(() => Object.keys(data).reverse(), []);
   const [hoverKey, setHoverKey] = useState(keys[0] ?? null);
 
@@ -104,7 +112,7 @@ export function Timeline() {
 
             {/* optional tags / assets */}
             <div className="mt-4 flex flex-wrap gap-2">
-              {(data[hoverKey].tags || []).map((t) => (
+              {(data[hoverKey].tags || []).map((t: string) => (
                 <span
                   key={t}
                   className="text-xs px-3 py-1 border rounded-full opacity-90"
@@ -146,7 +154,7 @@ export function Timeline() {
               <div className="mt-2 text-sm opacity-80">
                 {data[hoverKey].quickFacts ? (
                   <ul className="list-inside list-disc">
-                    {data[hoverKey].quickFacts.map((f, i) => (
+                    {data[hoverKey].quickFacts.map((f: string, i: number) => (
                       <li key={i}>{f}</li>
                     ))}
                   </ul>
@@ -161,7 +169,7 @@ export function Timeline() {
               <div className="mt-2 text-sm opacity-80">
                 {(data[hoverKey].related || []).length > 0 ? (
                   <div className="flex flex-wrap gap-2">
-                    {data[hoverKey].related.map((r) => (
+                    {data[hoverKey].related?.map((r: string) => (
                       <span
                         key={r}
                         className="px-2 py-1 border rounded-md text-xs"

@@ -1,5 +1,4 @@
-// src/lib/content.ts
-type BlogMeta = {
+export type BlogMeta = {
   slug: string;
   title: string;
   date: string;
@@ -8,7 +7,7 @@ type BlogMeta = {
   tags?: string[];
 };
 
-type PaperMeta = BlogMeta & {
+export type PaperMeta = BlogMeta & {
   authors?: string[];
 };
 

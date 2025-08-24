@@ -11,11 +11,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     },
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "types":["vite/client"]
-  }
+  },
 }
 

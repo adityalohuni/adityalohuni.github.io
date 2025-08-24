@@ -1,32 +1,68 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Timeline } from "@/components/timeline/Timeline";
 
 import { ModeToggle } from "@/components/theme/ModeToggle";
-import aditya_png from "@/assets/aditya_grey.png";
-
-// AboutMe component that reads content from a JSON file
-// Expected JSON shape (example):
-// {
-//   "name": "Aditya",
-//   "email": "aditya@example.com",
-//   "github": "https://github.com/your-username",
-//   "linkedin": "https://www.linkedin.com/in/your-profile/",
-//   "resumeLink": "/resume.pdf",
-//   "avatar": "/avatar.jpg",
-//   "bio": "Short bio...",
-//   "tech": ["JavaScript/TypeScript", "React", "Node.js"],
-//   "certs": [{"title":"Intro to ML","issuer":"Coursera","year":2024,"link":"#"}],
-//   "interests": { "strava": "https://www.strava.com/athletes/your-strava-id", "text": "Running" },
-//   "topSkills": ["Systems design","ML prototyping","Cross-platform mobile apps"],
-//   "openTo": "Fullstack / ML systems"
-// }
-//
+type Profile = {
+  name: string;
+  email: string;
+  github: string;
+  linkedin: string;
+  resumeLink: string;
+  avatar: string;
+  bio: string;
+  tech: string[];
+  certs: {
+    title: string;
+    issuer: string;
+    year: number;
+    link: string;
+  }[];
+  interests: {
+    strava: string;
+    text: string;
+  };
+  topSkills: string[];
+  openTo: string;
+  links: {
+    blog: string;
+  };
+  labels: {
+    aboutHeading: string;
+    techSummaryTitle: string;
+    techSummarySubtitle: string;
+    noQuickStats: string;
+    certsTitle: string;
+    certsSubtitle: string;
+    noCerts: string;
+    writingTitle: string;
+    writingSubtitle: string;
+    papersStatus: string;
+    viewBlogBtn: string;
+    interestsTitle: string;
+    viewStravaBtn: string;
+    noStrava: string;
+    roleTag: string;
+    emailNotConfigured: string;
+    downloadResumeBtn: string;
+    openToPrefix: string;
+    availableFor: string;
+    topSkillsTitle: string;
+    noTopSkills: string;
+    collabQuestion: string;
+    collabSubject: string;
+    sayHelloBtn: string;
+    contactNotConfigured: string;
+  };
+};
 
 export function About() {
-  const data = import.meta.glob("/content/about/about.json", {
+  // Because json file isn't within src, yehh
+  const modules = import.meta.glob("/content/about/about.json", {
     eager: true,
-  })["/content/about/about.json"].default;
+  }) as Record<string, { default: Profile }>;
+
+  const data = modules["/content/about/about.json"].default;
   // Use useMemo to avoid recreating values on every render
   const cfg = useMemo(() => {
     // Provide a safe fallback if the JSON file is missing or incomplete

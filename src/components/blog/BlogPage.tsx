@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { ContentGrid } from "@/components/blog/ContentGrid";
 import { BlogCard } from "@/components/blog/BlogCard";
-import { getBlogs } from "@/lib/content";
+import { getBlogs, type BlogMeta } from "@/lib/content";
 
 export function BlogPage() {
   const blogs = getBlogs();
@@ -11,7 +11,7 @@ export function BlogPage() {
       <section className="max-w-6xl mx-auto px-4 py-8">
         <h2 className="text-2xl font-bold mb-6">Blog</h2>
         <ContentGrid>
-          {blogs.map((post) => (
+          {blogs.map((post: BlogMeta) => (
             <BlogCard key={post.slug} {...post} />
           ))}
         </ContentGrid>

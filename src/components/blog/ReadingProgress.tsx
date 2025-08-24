@@ -9,7 +9,7 @@ export function ReadingProgress({ targetId }: { targetId: string }) {
     if (!target) return;
 
     const handleScroll = () => {
-      const { top, height } = target.getBoundingClientRect();
+      const { height } = target.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const scrollTop = window.scrollY;
       const offsetTop = target.offsetTop;
