@@ -5,18 +5,14 @@
   },
   "202401": {
     "title": "Internship at BB Deep Learning",
-    "description": "Interned at BB Deep Learning, an Indian startup, from January to March 2024, developing bots using large language models and scraping Hinglish datasets for NLP applications."
+    "description": "Interned at BB Deep Learning, an Indian startup, from January to March 2024, developing bot interface using large language models and scraping Hinglish datasets for NLP applications."
   },
-  "202404": {
+  "202403": {
     "title": "Left Tomsk State University",
     "description": "Concluded studies at Tomsk State University in April 2024, shifting focus to practical AI and machine learning applications."
   },
   "202407": {
     "title": "Freelance Work for Small-Scale Businesses",
-    "description": "Worked as a freelancer from July to October 2024, providing software solutions for small-scale businesses, leveraging skills in AI and web development."
-  },
-  "202503": {
-    "title": "Enrolled at WSB Academia",
-    "description": "Began a Bachelor’s program in Computer Science at WSB Academia, focusing on applied AI and related technologies."
+    "description": "Worked as a freelancer from July to October 2024, providing software solutions for small-scale businesses, leveraging skills in AI and native development."
   }
 }
